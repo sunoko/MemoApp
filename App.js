@@ -7,9 +7,9 @@ import LoginScreen from './src/screens/LoginScreen';
 import SignupScreen from './src/screens/SignupScreen';
 
 const App = createStackNavigator({
-  Home:       { screen: MemoListScreen },
   Login:      { screen: LoginScreen },
   Signup:     { screen: SignupScreen },
+  Home:       { screen: MemoListScreen },
   MemoDetail: { screen: MemoDetailScreen },
   MemoEdit:   { screen: MemoEditScreen },
 }, {
