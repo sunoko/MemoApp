@@ -1,14 +1,31 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+import firebase from 'firebase';
 import MemoList from '../components/MemoList';
 import CircleButton from '../elements/CircleButton';
 
 class MemoListScreen extends React.Component {
+  // eslint-disable-next-line class-methods-use-this
+  handlePress() {
+    const { params } = this.props.navigation.state;
+    const db = firebase.firestore();
+    db.collection(`users/${params.currentUser.uid}/memos`).add({
+      body: 'Tokyo',
+      createdOn: new Date(),
+    })
+      .then((docRef) => {
+        console.log("Document written with ID: ", docRef.id);
+      })
+      .catch((error) => {
+        console.log("Error adding document: ", error);
+      });
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <MemoList navigation={this.props.navigation} />
-        <CircleButton name="plus" onPress={() => { this.props.navigation.navigate('MemoEdit'); }} />
+        <CircleButton name="plus" onPress={this.handlePress.bind(this)} />
       </View>
     );
   }
