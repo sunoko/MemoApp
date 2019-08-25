@@ -10,10 +10,11 @@ const CustomIcon = createIconSet({
 }, 'FontAwesome');
 
 class CircleButton extends React.Component {
-  state = {
-    fontLoaded: false,
+  constructor(props) {
+    super(props);
+    this.state = { fontLoaded: false };
   }
-  
+
   async componentWillMount() {
     await Font.loadAsync({
       FontAwesome: fontAwesome,
