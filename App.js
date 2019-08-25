@@ -7,14 +7,16 @@ import MemoEditScreen from './src/screens/MemoEditScreen';
 import LoginScreen from './src/screens/LoginScreen';
 import SignupScreen from './src/screens/SignupScreen';
 
+import ENV from './env.json';
+
 const firebaseConfig = {
-  apiKey: 'AIzaSyCvk8QJqKxVl-nTftbYlxvOwvhjMR1KGfs',
-  authDomain: 'memoapp-44665.firebaseapp.com',
-  databaseURL: 'https://memoapp-44665.firebaseio.com',
-  projectId: 'memoapp-44665',
-  storageBucket: '',
-  messagingSenderId: '42023226000',
-  appId: '1:42023226000:web:a48acc5ff674c8e3',
+  apiKey:            ENV.FIREBASE_API_KEY,
+  authDomain:        ENV.FIREBASE_AUTH_DOMAIN,
+  databaseURL:       ENV.FIREBASE_DATABASE_URL,
+  projectId:         ENV.FIREBASE_PROJECT_ID,
+  storageBucket:     ENV.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: ENV.FIREBASE_MESSAGING_SENDER_ID,
+  appId:             ENV.FIREBASE_APP_ID,
 };
 firebase.initializeApp(firebaseConfig);
 
