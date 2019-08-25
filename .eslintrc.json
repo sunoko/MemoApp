@@ -6,6 +6,8 @@
         "import"
     ],
     "rules": {
+        "react/no-unused-state": 0,
+        "react/no-access-state-in-setstate": 0,
         "no-console": 0,
         "key-spacing": 0,
         "react/jsx-filename-extension": 0,
