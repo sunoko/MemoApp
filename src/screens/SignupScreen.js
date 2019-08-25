@@ -20,7 +20,6 @@ class SignupScreen extends React.Component {
         this.props.navigation.navigate('Home');
       })
       .catch((error) => {
-        // eslint-disable-next-line no-console
         console.log(error);
       });
   }

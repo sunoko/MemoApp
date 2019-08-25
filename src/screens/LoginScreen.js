@@ -8,8 +8,8 @@ class LoginScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      password: '',
+      email: 'a@mail.com',
+      password: '12345678',
     };
   }
 
@@ -17,10 +17,10 @@ class LoginScreen extends React.Component {
   handleSubmit() {
     firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
       .then((user) => {
-        this.props.navigation.navigate('Home', { currentUser: user });
+        console.log('success!', user);
+        this.props.navigation.navigate('Home');
       })
       .catch((error) => {
-        // eslint-disable-next-line no-console
         console.log(error);
       });
   }
