@@ -20,6 +20,7 @@ class LoginScreen extends React.Component {
         this.props.navigation.navigate('Home', { currentUser: user });
       })
       .catch((error) => {
+        // eslint-disable-next-line no-console
         console.log(error);
       });
   }

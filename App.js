@@ -9,7 +9,7 @@ import SignupScreen from './src/screens/SignupScreen';
 
 import ENV from './env.json';
 
-require("firebase/firestore");
+require('firebase/firestore');
 
 const firebaseConfig = {
   apiKey:            ENV.FIREBASE_API_KEY,

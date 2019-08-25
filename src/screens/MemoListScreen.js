@@ -14,10 +14,12 @@ class MemoListScreen extends React.Component {
       createdOn: new Date(),
     })
       .then((docRef) => {
-        console.log("Document written with ID: ", docRef.id);
+        // eslint-disable-next-line no-console
+        console.log('Document written with ID: ', docRef.id);
       })
       .catch((error) => {
-        console.log("Error adding document: ", error);
+        // eslint-disable-next-line no-console
+        console.log('Error adding document: ', error);
       });
   }
 
