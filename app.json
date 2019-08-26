@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "MemoApp",
-    "slug": "MemoApp",
-    "privacy": "public",
+    "name": "Memott_Chinone",
+    "slug": "Memott_Chinone",
+    "privacy": "unlisted",
     "sdkVersion": "34.0.0",
     "platforms": [
       "ios",
@@ -14,7 +14,7 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -24,7 +24,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "jp.kazukichinone.memott"
     }
   }
 }
